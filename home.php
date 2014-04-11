@@ -1,0 +1,12 @@
+<?php
+session_start();
+if(($_SESSION['valid_user'])||($_COOKIE['user']))
+{
+require('header1.inc');
+require('footer.inc');
+}
+else
+{
+header('Location:index.php');
+}
+?>
